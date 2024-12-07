@@ -1238,12 +1238,18 @@ input[type='checkbox']:focus-visible +
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    
     margin-bottom: auto;
 }
 
 
-.mobile-menu-nav-item {}
+.mobile-menu-nav-item {
+    color: #2e2f42;
+}
+.active-page {
+    color: #404bbf;
+
+}
 
 
 .mobile-menu-address {

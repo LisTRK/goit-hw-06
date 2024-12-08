@@ -239,14 +239,27 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
-    padding: 16px 0;
-    font-weight: 400;
-        font-size: 12px;
-        line-height: 117%;
-        letter-spacing: 0.04em;
+    gap: 24px;
+
+    font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
         color: #434455;
+    
+    
 }
+
+@media screen and (min-width: 768px) {
+    .address-list {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        gap: 12px;
+        padding: 16px 0;
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .address-list {
             flex-direction: row;
@@ -311,7 +324,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0;
+    padding: 72px 0;
     margin: 0 auto;
     max-width: 1440px;
 }
@@ -326,6 +339,7 @@ button {
 
 @media only screen and (min-width: 768px) {
     .hero-section {
+        padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
                 url('../images/hero/people-office_tab.jpg');
@@ -342,6 +356,7 @@ button {
 }
 @media only screen and (min-width: 1158px) {
     .hero-section {
+        padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url('../images/hero/people-office_des.jpg');
@@ -474,12 +489,17 @@ button {
 
 .featur-subtitle {
     font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        margin-bottom: 8px;
-        color: #2e2f42;
-
+    font-size: 36px;
+    line-height: 1.11;
+    margin-bottom: 8px;
+    color: #2e2f42;
     
+}
+
+@media screen and (max-width: 767px) {
+    .featur-subtitle {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width:1158px) {
@@ -620,7 +640,7 @@ button {
 
 
 .portfolio-section {
-    padding-top: 120px;
+    /* padding-top: 120px; */
 }
 
 .portfoliio-title {
@@ -729,8 +749,6 @@ button {
 
 .footer-section {
     background: #2e2f42;
-    padding-top: 96px;
-    padding-bottom: 96px;
 }
 @media screen and (min-width: 1158px) {
     .footer-section {
@@ -748,10 +766,13 @@ button {
         flex-wrap: wrap;
         row-gap: 72px;
         column-gap: 24px;
+        padding-left: 108px;
     }
 }
+
 @media screen and (min-width: 1158px) {
     .footer-container {
+        flex-wrap: nowrap;
         row-gap: 0;
         column-gap: 0;
     }
@@ -759,18 +780,23 @@ button {
 
 
 .footer-top {
-    display: inline-block;
     align-items: baseline;
+    margin-bottom: 72px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-top {
+        margin-bottom: 0;
+        display: inline-block;
+    }
 }
 
 @media screen and (min-width: 1158px) {
     .footer-top {
-            margin-right: 120px;
-        }
-}
-
-@media screen and (min-width: 1158px) {
-    .footer-top {
+        margin-right: 120px;
         
     }
 }
@@ -786,6 +812,8 @@ button {
     text-decoration: none;
     color: #4d5ae5;
     margin-bottom: 16px;
+    
+    
 }
 
 .logo-studio {color: #f4f4fd;}
@@ -796,7 +824,6 @@ button {
     width: 264px;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
     color: #f4f4fd;
 }
 
@@ -805,13 +832,30 @@ button {
 .footer-social-container {
     display: flex;
     flex-direction: column;
-    margin-right: 80px;
+    margin-bottom: 72px;
+}
+@media screen and (min-width: 768px) {
+    .footer-social-container {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .footer-social-container {
+        margin-right: 80px;
+        }
 }
 
 .footer-social-text {
     margin-bottom: 16px;
     color: #fff;
     font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-social-text {
+        text-align: start;
+    }
 }
 
 .footer-social-list {
@@ -849,15 +893,27 @@ button {
     fill: #f4f4fd;
 }
 
-.footer-subscribe-container {}
+.footer-subscribe-container {
+    
+}
 
 .footer-subscribe-title {
     font-weight: 500;
     color: #fff;
+
+    text-align: center;
     margin-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+    .footer-subscribe-title {
+        text-align: start;
+    }
+    
+}
+
 
 .footer-subcribe-form {
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -873,7 +929,10 @@ button {
     }
 }
 
-.footer-form-label {}
+
+.footer-form-label {
+    
+}
 
 .footer-form-input {
     border: 1px solid #fff;
@@ -888,6 +947,12 @@ button {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    
+    
 }
 
 .footer-form-input::placeholder {
@@ -904,6 +969,7 @@ button {
     
 
     border-radius: 4px;
+    padding: 8px 24px;
     min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
@@ -914,6 +980,14 @@ button {
     text-align: center;
     color: #fff;
     border: none;
+    margin: 0 auto;
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+    
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: #404BBF
 }
 
 .footer-form-icon {
@@ -1028,6 +1102,7 @@ button {
 .modal-form {}
 
 .modal-wrapper {
+    margin-bottom: 8px;
 }
 
 .modal-label {
@@ -1276,13 +1351,11 @@ input[type='checkbox']:focus-visible +
     margin-bottom: 48px;
 }
 
-.mobile-menu-address>
-.address-list>
-.address-item>
-.address-link{
+.footer-addres {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    padding: 0;
 }
 
 
@@ -1293,3 +1366,4 @@ input[type='checkbox']:focus-visible +
 }
 
 /* #endregion mobile menu form*/
+
